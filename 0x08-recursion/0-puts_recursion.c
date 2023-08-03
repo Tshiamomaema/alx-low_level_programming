@@ -1,13 +1,18 @@
 #include "main.h"
-
 /**
- * _puts_recursion - Takes in a string and prints it.
- *@s:  the string that will be added
- *
- * return - nothing
+ * _puts_recursion - function like puts();
+ * @s: input
+ * Return: Always 0 (Success)
  */
-
 void _puts_recursion(char *s)
 {
-	_putchar("%c", *s);
+	if (*s)
+	{
+		_putchar(*s);
+		_puts_recursion(s + 1);
+	}
+
+	else
+		_putchar('\n');
 }
+
